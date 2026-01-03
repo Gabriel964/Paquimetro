@@ -1,0 +1,125 @@
+/* Rezet inicial */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Organização de todo o corpo da página.*/
+body {
+    background-color: rgb(232, 221, 178);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/*Estilização dos elementos do main*/
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+
+h1 {
+    color: #333;
+    padding-bottom: 10PX;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+P {
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+/*
+Aqui estou organizando a parte de inputs, buttons,
+adicionando estilo e animações básicas
+*/
+input[type="number"] {
+    background-color: #fff;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #f0c040;
+    outline: none;
+    box-shadow: 0 0 8px #f0c040;
+}
+
+input::placeholder {
+    color: #888;
+    font-size: italic;
+}
+
+button {
+    background-color: #3cff00;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #28a745;
+    transition: 0.3s;
+}
+
+/*Aqui já é a parte onde fica a estrutura de 2 colunas*/
+.container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.coluna-esquerda,
+.coluna-direita {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+/*Agora vamos estilizar a tabela*/
+.coluna-direita table {
+    background-color: #ffffff;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.coluna-direita th,
+.coluna-direita td {
+    border: 1px solid #333;
+    padding: 12px;
+    text-align: center;
+}
+
+/*Aqui é onde fica o rodapé*/
+footer {
+    margin-top: 80px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+
+}
