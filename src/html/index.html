@@ -20,8 +20,8 @@
             <div class="container">
                 <section class="coluna-esquerda">
 
-                    <input type="number" id="tempoEstacionado" placeholder="Tempo">
-                    <button>Calcular</button>
+                    <input type="number" id="valorInput" placeholder="Tempo" min="1">
+                    <button class="btn" id="btnAbrir">Reservar</button>
                 </section>
 
                 <section class="coluna-direita">
@@ -37,16 +37,24 @@
                         </tr>
                         <tr>
                             <td>2h</td>
-                            <td>15,00</td>
+                            <td>10,00</td>
                         </tr>
                         <tr>
                             <td>3h ou mais</td>
-                            <td>30,00</td>
+                            <td>15,00</td>
                         </tr>
                     </table>
                 </section>
             </div>
         </main>
+
+        <!-- mensagem de erro -->
+        <div id="invalido" class="numeroInvalido">
+            <strong>
+            Valor inválido, digite um valor correspondente<br>
+            a uma opção presente na tabela!
+            </strong>
+        </div>
 
         <footer>
             <p>© 2025 Estacionamento paquímetro</p>
@@ -54,20 +62,22 @@
     </div>
 
     <!-- Aqui é o modal, que aparece após o click do botão -->
-    <div class="popup">
+    <div id="modal" class="popup">
         <div class="popup-content">
             <h1>Reserva concluída</h1>
 
             <p>Informações da sua reserva:</p>
 
-            <div class="resultado">
+            <div id="resultadoModal" class="resultado">
                 <p><strong>Horário:</strong> <span id="horario">xx:xx</span></p>
                 <p><strong>Valor:</strong> <span id="valor">xx,xx</span></p>
                 <p><strong>Troco:</strong> <span id="troco">xx,xx</span></p>
             </div>
 
-            <button class="fecharBotao" onclick="fecharPopup()">Fechar</button>
+            <button type="button" class="btn" id="btnFechar">Fechar</button>
         </div>
+    </div>
+    <script src="../js/script.js"></script>
 
 </body>
 
